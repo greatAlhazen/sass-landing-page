@@ -1,5 +1,4 @@
-$color-primary:#768953;
+@import "utils/base.scss";
+@import "utils/variable.scss";
+@import "components/navbar.scss";
 
-h1{
-    color:$color-primary;
-}
