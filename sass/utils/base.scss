@@ -3,6 +3,8 @@
     margin:0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    border:none;
+    outline:none;
 }
 
 li{
@@ -13,4 +15,16 @@ a{
     text-decoration: none;
     color:inherit;
     cursor: pointer;
+}
+
+html{
+    font-size:62%;
+    
+    @include respond(tablet) { 
+        font-size: 56.25%;
+    }
+
+    @include respond(phone) { 
+        font-size: 50.25%;
+    }
 }

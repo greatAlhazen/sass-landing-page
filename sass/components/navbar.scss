@@ -1,3 +1,138 @@
-h1{
-    color:$creme-color;
+.homeContainer{
+    width:100%;
+    height:100vh;
+    background-image: linear-gradient(to right bottom, $creme-color, $mint-color),
+    url(../images/tablebg.jpg);
+    background-blend-mode:color-burn;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+
+    .navbar{
+        padding:2rem 7%;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+
+
+    .navbarLeft{
+        display:flex;
+        align-items: center;
+    
+
+        .navbarLogo{
+            width:4rem;
+            height:4rem;
+        }
+
+        .navbarList{
+            display:flex;
+            align-items: center;
+            gap:2rem;
+            margin-left:3rem;
+            z-index:999;
+
+            @include respond(tablet) { 
+                position:absolute;
+                top:-100rem;
+                right:4rem;
+                flex-direction: column;
+                background-color: $creme-color;
+                padding:1.2rem 3rem;
+                transition: all .5s;
+
+                &.active{
+                    top:6.2rem;
+                }
+            }
+
+            a{
+                font-size:2rem;
+                font-weight: 700;
+            }
+        }
+
+}
+
+    .socialLinks{
+        justify-self: flex-end;
+        display:flex;
+        gap:1.4rem;
+    
+
+        ion-icon{
+            font-size:2.4rem;
+            color:var(--color);
+        }
+
+}
+
+}
+
+.home{
+    position: absolute;
+    top:50%;
+    left:0;
+    transform: translateY(-50%);
+    display:flex;
+    justify-content: space-around;
+    width:90%;
+    height: max-content;
+    background-color: $white;
+
+    @include respond(phone) { 
+        flex-direction: column-reverse;
+    }
+
+
+    .content{
+        flex:0 0 40%;
+        padding-left:3rem;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction:column;
+
+        h1{
+            font-size:3.9rem;
+            margin-bottom:2rem;
+            color:$dusty-rose;
+        }
+
+        h4{
+            font-size:1.8rem;
+            font-weight:300;
+            margin-bottom:1.3rem;
+        }
+
+        button{
+           margin:1.5rem auto;
+        }
+    }
+
+    .images{
+        flex:0 0 60%;
+        display:flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap:1rem;
+
+        img{
+            width:35%;
+
+        }
+    }
+ 
+}
+
+}
+
+
+#menu{
+    display: none;
+
+    @include respond(tablet) { 
+        display: block;
+    }
 }

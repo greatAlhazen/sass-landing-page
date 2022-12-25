@@ -2,7 +2,9 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif; }
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  outline: none; }
 
 li {
   list-style: none; }
@@ -12,5 +14,117 @@ a {
   color: inherit;
   cursor: pointer; }
 
-h1 {
-  color: #f4d8ae; }
+html {
+  font-size: 62%; }
+  @media only screen and (max-width: 768px) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 500px) {
+    html {
+      font-size: 50.25%; } }
+
+.btn {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: .5rem 3rem;
+  display: inline-block;
+  border-radius: .5rem;
+  transition: all .2s;
+  font-size: 1.4rem;
+  background-color: #301008;
+  color: #fffdfa; }
+  .btn:hover {
+    background-color: #36454F;
+    color: #faf9f9;
+    box-shadow: 1rem 1rem 2rem rgba(48, 16, 8, 0.5); }
+
+.homeContainer {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(to right bottom, #f4d8ae, #c7ddcc), url(../images/tablebg.jpg);
+  background-blend-mode: color-burn;
+  background-position: center;
+  background-size: cover;
+  position: relative; }
+  .homeContainer .navbar {
+    padding: 2rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .homeContainer .navbar .navbarLeft {
+      display: flex;
+      align-items: center; }
+      .homeContainer .navbar .navbarLeft .navbarLogo {
+        width: 4rem;
+        height: 4rem; }
+      .homeContainer .navbar .navbarLeft .navbarList {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        margin-left: 3rem;
+        z-index: 999; }
+        @media only screen and (max-width: 768px) {
+          .homeContainer .navbar .navbarLeft .navbarList {
+            position: absolute;
+            top: -100rem;
+            right: 4rem;
+            flex-direction: column;
+            background-color: #f4d8ae;
+            padding: 1.2rem 3rem;
+            transition: all .5s; }
+            .homeContainer .navbar .navbarLeft .navbarList.active {
+              top: 6.2rem; } }
+        .homeContainer .navbar .navbarLeft .navbarList a {
+          font-size: 2rem;
+          font-weight: 700; }
+    .homeContainer .navbar .socialLinks {
+      justify-self: flex-end;
+      display: flex;
+      gap: 1.4rem; }
+      .homeContainer .navbar .socialLinks ion-icon {
+        font-size: 2.4rem;
+        color: var(--color); }
+  .homeContainer .home {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    height: max-content;
+    background-color: #fffdfa; }
+    @media only screen and (max-width: 500px) {
+      .homeContainer .home {
+        flex-direction: column-reverse; } }
+    .homeContainer .home .content {
+      flex: 0 0 40%;
+      padding-left: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column; }
+      .homeContainer .home .content h1 {
+        font-size: 3.9rem;
+        margin-bottom: 2rem;
+        color: #c29591; }
+      .homeContainer .home .content h4 {
+        font-size: 1.8rem;
+        font-weight: 300;
+        margin-bottom: 1.3rem; }
+      .homeContainer .home .content button {
+        margin: 1.5rem auto; }
+    .homeContainer .home .images {
+      flex: 0 0 60%;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem; }
+      .homeContainer .home .images img {
+        width: 35%; }
+
+#menu {
+  display: none; }
+  @media only screen and (max-width: 768px) {
+    #menu {
+      display: block; } }
