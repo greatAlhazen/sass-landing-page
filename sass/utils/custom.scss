@@ -8,6 +8,7 @@
     font-size:1.4rem;
     background-color: $black-cherry-color;
     color:$white;
+    cursor: pointer;
 
 
     &:hover{
@@ -15,4 +16,9 @@
         color:$light-gray;
         box-shadow: 1rem 1rem 2rem rgba($black-cherry-color,.5);
     }
+}
+
+
+section{
+    padding:7rem 9%;
 }

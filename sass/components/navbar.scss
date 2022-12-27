@@ -1,138 +1,167 @@
-.homeContainer{
-    width:100%;
-    height:100vh;
-    background-image: linear-gradient(to right bottom, $creme-color, $mint-color),
+.homeContainer {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(to right bottom, $creme-color, $mint-color),
     url(../images/tablebg.jpg);
-    background-blend-mode:color-burn;
-    background-position: center;
-    background-size: cover;
-    position: relative;
+  background-blend-mode: color-burn;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  padding:0;
 
+  .navbar {
+    padding: 2rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    .navbar{
-        padding:2rem 7%;
-        display:flex;
+    .navbarLeft {
+      display: flex;
+      align-items: center;
+
+      .navbarLogo {
+        width: 4rem;
+        height: 4rem;
+      }
+
+      .navbarList {
+        display: flex;
         align-items: center;
-        justify-content: space-between;
+        gap: 2rem;
+        margin-left: 3rem;
+        z-index: 999;
 
+        @include respond(tablet) {
+          position: absolute;
+          top: -100rem;
+          right: 4rem;
+          flex-direction: column;
+          background-color: $creme-color;
+          padding: 1.2rem 3rem;
+          transition: all 0.5s;
 
-    .navbarLeft{
-        display:flex;
-        align-items: center;
-    
-
-        .navbarLogo{
-            width:4rem;
-            height:4rem;
+          &.active {
+            top: 6.2rem;
+          }
         }
 
-        .navbarList{
-            display:flex;
-            align-items: center;
-            gap:2rem;
-            margin-left:3rem;
-            z-index:999;
+        a {
+          font-size: 2rem;
+          font-weight: 700;
+          position: relative;
 
-            @include respond(tablet) { 
-                position:absolute;
-                top:-100rem;
-                right:4rem;
-                flex-direction: column;
-                background-color: $creme-color;
-                padding:1.2rem 3rem;
-                transition: all .5s;
+          &:hover:before {
+            content: "";
+            width: 100%;
+            height: 4px;
+            position: absolute;
+            bottom: -3px;
+            background-color: $mint-color;
+            transition: all 0.3s;
+          }
 
-                &.active{
-                    top:6.2rem;
-                }
+          @include respond(tablet) {
+            &:hover:before {
+              background-color: $dusty-rose;
             }
-
-            a{
-                font-size:2rem;
-                font-weight: 700;
-            }
+          }
         }
+      }
+    }
 
-}
+    .socialLinks {
+      justify-self: flex-end;
+      display: flex;
+      gap: 1.4rem;
 
-    .socialLinks{
-        justify-self: flex-end;
-        display:flex;
-        gap:1.4rem;
-    
+      ion-icon {
+        font-size: 2.4rem;
+        color: var(--color);
+        cursor: pointer;
+      }
+    }
+  }
 
-        ion-icon{
-            font-size:2.4rem;
-            color:var(--color);
-        }
-
-}
-
-}
-
-.home{
+  .home {
     position: absolute;
-    top:50%;
-    left:0;
+    top: 50%;
+    left: 0;
     transform: translateY(-50%);
-    display:flex;
+    display: flex;
     justify-content: space-around;
-    width:90%;
+    width: 90%;
     height: max-content;
     background-color: $white;
 
-    @include respond(phone) { 
-        flex-direction: column-reverse;
+    @include respond(phone) {
+      flex-direction: column-reverse;
+      background-color: transparent;
     }
 
+    .content {
+      flex: 0 0 40%;
+      padding-left: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
 
-    .content{
-        flex:0 0 40%;
-        padding-left:3rem;
-        display:flex;
-        align-items: center;
+      h1 {
+        font-size: 3.9rem;
+        margin-bottom: 2rem;
+        color: $dusty-rose;
+
+        @include respond(phone) {
+          color:$white;
+        }
+      }
+
+      h4 {
+        font-size: 1.8rem;
+        font-weight: 300;
+        margin-bottom: 1.3rem;
+
+        @include respond(phone) {
+          font-weight: bolder;
+        }
+    
+      }
+
+      button {
+        margin: 1.5rem auto;
+      }
+    }
+
+    .images {
+      flex: 0 0 60%;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      
+      @include respond(phone) {
         justify-content: center;
-        flex-direction:column;
+      }
+  
 
-        h1{
-            font-size:3.9rem;
-            margin-bottom:2rem;
-            color:$dusty-rose;
-        }
+      img {
+        width: 35%;
+        transition: all 0.3s;
 
-        h4{
-            font-size:1.8rem;
-            font-weight:300;
-            margin-bottom:1.3rem;
+        &:hover {
+          transform: scale(1.2) translateX(-5px);
         }
-
-        button{
-           margin:1.5rem auto;
-        }
+      }
     }
-
-    .images{
-        flex:0 0 60%;
-        display:flex;
-        align-items: center;
-        flex-wrap: wrap;
-        gap:1rem;
-
-        img{
-            width:35%;
-
-        }
-    }
- 
+  }
 }
 
-}
+#menu {
+  display: none;
+  margin-left: 2rem;
+  color: $dusty-rose;
 
-
-#menu{
-    display: none;
-
-    @include respond(tablet) { 
-        display: block;
-    }
+  @include respond(tablet) {
+    display: block;
+  }
 }

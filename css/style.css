@@ -32,11 +32,15 @@ html {
   transition: all .2s;
   font-size: 1.4rem;
   background-color: #301008;
-  color: #fffdfa; }
+  color: #fffdfa;
+  cursor: pointer; }
   .btn:hover {
     background-color: #36454F;
     color: #faf9f9;
     box-shadow: 1rem 1rem 2rem rgba(48, 16, 8, 0.5); }
+
+section {
+  padding: 7rem 9%; }
 
 .homeContainer {
   width: 100%;
@@ -45,7 +49,8 @@ html {
   background-blend-mode: color-burn;
   background-position: center;
   background-size: cover;
-  position: relative; }
+  position: relative;
+  padding: 0; }
   .homeContainer .navbar {
     padding: 2rem 7%;
     display: flex;
@@ -71,19 +76,32 @@ html {
             flex-direction: column;
             background-color: #f4d8ae;
             padding: 1.2rem 3rem;
-            transition: all .5s; }
+            transition: all 0.5s; }
             .homeContainer .navbar .navbarLeft .navbarList.active {
               top: 6.2rem; } }
         .homeContainer .navbar .navbarLeft .navbarList a {
           font-size: 2rem;
-          font-weight: 700; }
+          font-weight: 700;
+          position: relative; }
+          .homeContainer .navbar .navbarLeft .navbarList a:hover:before {
+            content: "";
+            width: 100%;
+            height: 4px;
+            position: absolute;
+            bottom: -3px;
+            background-color: #c7ddcc;
+            transition: all 0.3s; }
+          @media only screen and (max-width: 768px) {
+            .homeContainer .navbar .navbarLeft .navbarList a:hover:before {
+              background-color: #c29591; } }
     .homeContainer .navbar .socialLinks {
       justify-self: flex-end;
       display: flex;
       gap: 1.4rem; }
       .homeContainer .navbar .socialLinks ion-icon {
         font-size: 2.4rem;
-        color: var(--color); }
+        color: var(--color);
+        cursor: pointer; }
   .homeContainer .home {
     position: absolute;
     top: 50%;
@@ -96,7 +114,8 @@ html {
     background-color: #fffdfa; }
     @media only screen and (max-width: 500px) {
       .homeContainer .home {
-        flex-direction: column-reverse; } }
+        flex-direction: column-reverse;
+        background-color: transparent; } }
     .homeContainer .home .content {
       flex: 0 0 40%;
       padding-left: 3rem;
@@ -108,10 +127,16 @@ html {
         font-size: 3.9rem;
         margin-bottom: 2rem;
         color: #c29591; }
+        @media only screen and (max-width: 500px) {
+          .homeContainer .home .content h1 {
+            color: #fffdfa; } }
       .homeContainer .home .content h4 {
         font-size: 1.8rem;
         font-weight: 300;
         margin-bottom: 1.3rem; }
+        @media only screen and (max-width: 500px) {
+          .homeContainer .home .content h4 {
+            font-weight: bolder; } }
       .homeContainer .home .content button {
         margin: 1.5rem auto; }
     .homeContainer .home .images {
@@ -120,11 +145,19 @@ html {
       align-items: center;
       flex-wrap: wrap;
       gap: 1rem; }
+      @media only screen and (max-width: 500px) {
+        .homeContainer .home .images {
+          justify-content: center; } }
       .homeContainer .home .images img {
-        width: 35%; }
+        width: 35%;
+        transition: all 0.3s; }
+        .homeContainer .home .images img:hover {
+          transform: scale(1.2) translateX(-5px); }
 
 #menu {
-  display: none; }
+  display: none;
+  margin-left: 2rem;
+  color: #c29591; }
   @media only screen and (max-width: 768px) {
     #menu {
       display: block; } }
