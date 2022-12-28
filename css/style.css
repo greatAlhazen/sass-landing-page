@@ -14,6 +14,9 @@ a {
   color: inherit;
   cursor: pointer; }
 
+body {
+  overflow-x: hidden; }
+
 html {
   font-size: 62%; }
   @media only screen and (max-width: 768px) {
@@ -22,6 +25,10 @@ html {
   @media only screen and (max-width: 500px) {
     html {
       font-size: 50.25%; } }
+
+@keyframes heading {
+  100% {
+    background-position: 0 0; } }
 
 .btn {
   text-transform: uppercase;
@@ -41,6 +48,20 @@ html {
 
 section {
   padding: 7rem 9%; }
+
+.heading {
+  position: absolute;
+  top: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 4rem;
+  -webkit-text-stroke: 1px #c29591;
+  color: transparent;
+  background-image: linear-gradient(#c29591, #c29591);
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-position: -18rem 0;
+  animation: heading 5s linear infinite alternate; }
 
 .homeContainer {
   width: 100%;
@@ -161,3 +182,44 @@ section {
   @media only screen and (max-width: 768px) {
     #menu {
       display: block; } }
+
+.about {
+  padding-left: 0;
+  padding-right: 0;
+  position: relative; }
+  .about .aboutContainer {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    margin-top: 7rem; }
+    @media only screen and (max-width: 768px) {
+      .about .aboutContainer {
+        flex-direction: column; } }
+    .about .aboutContainer img {
+      width: 50%;
+      object-fit: cover;
+      object-position: center; }
+      @media only screen and (max-width: 768px) {
+        .about .aboutContainer img {
+          width: 100%; } }
+    .about .aboutContainer .details {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background-color: #301008;
+      padding: 2rem; }
+      @media only screen and (max-width: 768px) {
+        .about .aboutContainer .details {
+          width: 100%; } }
+      .about .aboutContainer .details h4 {
+        font-family: 'Sevillana', cursive;
+        margin-bottom: 2rem;
+        font-size: 3rem;
+        color: #c7ddcc; }
+      .about .aboutContainer .details p {
+        line-height: 2;
+        color: #faf9f9;
+        font-size: 1.6rem;
+        text-align: justify; }

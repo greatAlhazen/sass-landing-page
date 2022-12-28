@@ -22,3 +22,18 @@
 section{
     padding:7rem 9%;
 }
+
+.heading{
+    position: absolute;
+    top:3rem;
+    left:50%;
+    transform: translateX(-50%);
+    font-size:4rem;
+    -webkit-text-stroke: 1px $dusty-rose;
+    color:transparent;
+    background-image: linear-gradient($dusty-rose,$dusty-rose);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position:-18rem 0 ;
+    animation: heading 5s linear infinite alternate;
+}

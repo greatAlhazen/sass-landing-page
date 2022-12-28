@@ -1,0 +1,56 @@
+.about{
+    padding-left:0;
+    padding-right:0;
+    position: relative;
+
+    .aboutContainer{
+        width:100%;
+        height:80vh;
+        display:flex;
+       margin-top:7rem;
+
+        @include respond(tablet) {
+            flex-direction: column;
+          }
+
+        img{
+            width:50%;
+            object-fit: cover;
+            object-position: center;
+
+            @include respond(tablet) {
+                width:100%;
+              }
+        }
+
+        .details{
+            width:50%;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color:$black-cherry-color;
+            padding:2rem;
+
+            @include respond(tablet) {
+                width:100%;
+              }
+
+            h4{
+                font-family: 'Sevillana', cursive;
+                margin-bottom:2rem;
+                font-size:3rem;
+                color:$mint-color;
+            }
+
+            p{
+                line-height:2;
+                color:$light-gray;
+                font-size:1.6rem;
+                text-align: justify;
+            }
+        }
+        
+    }
+
+}
