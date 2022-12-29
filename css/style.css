@@ -223,3 +223,45 @@ section {
         color: #faf9f9;
         font-size: 1.6rem;
         text-align: justify; }
+
+.menu {
+  position: relative;
+  background-color: #c7ddcc; }
+  @media only screen and (max-width: 768px) {
+    .menu {
+      margin-top: 17rem; } }
+  @media only screen and (max-width: 500px) {
+    .menu {
+      margin-top: 10rem; } }
+  .menu .menuContainer {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    padding-top: 5rem; }
+    .menu .menuContainer .menuCard {
+      width: 25rem;
+      height: 25rem;
+      padding: 2rem 0;
+      box-shadow: inset 2rem 2rem 2rem #c29591, 2.5rem 3.5rem 2rem #c29591, 2.5rem 3rem 3rem #c29591, inset -2rem -2rem 2.5rem #c29591;
+      border-radius: 98% 2% 44% 56% / 0% 30% 70% 100%;
+      background-color: #faf9f9;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 2rem;
+      overflow: hidden;
+      cursor: pointer;
+      transition: .3s; }
+      .menu .menuContainer .menuCard:hover {
+        border-radius: 50%; }
+      .menu .menuContainer .menuCard img {
+        width: 10rem;
+        height: 10rem; }
+      .menu .menuContainer .menuCard h1 {
+        font-size: 2rem;
+        color: #301008; }
+      .menu .menuContainer .menuCard h4 {
+        font-size: 3rem; }

@@ -1,0 +1,58 @@
+.menu{
+    position: relative;
+    background-color: $mint-color;
+    @include respond(tablet) {
+        margin-top:17rem;
+      }
+
+      @include respond(phone) {
+        margin-top:10rem;
+      }
+
+    .menuContainer{
+        width:90%;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        gap:4rem;
+        flex-wrap: wrap;
+        padding-top:5rem;
+
+        .menuCard{
+            width:25rem;
+            height:25rem;
+            padding:2rem 0;
+            box-shadow:inset 2rem 2rem 2rem $dusty-rose,
+                             2.5rem 3.5rem 2rem $dusty-rose,
+                             2.5rem 3rem 3rem $dusty-rose,
+                        inset -2rem -2rem 2.5rem $dusty-rose;
+            border-radius: 98% 2% 44% 56% / 0% 30% 70% 100% ;    
+            background-color: $light-gray;
+            display:flex;
+            align-items: center;
+            flex-direction: column;
+            gap:2rem;
+            overflow: hidden;
+            cursor: pointer;
+            transition: .3s;
+
+            &:hover{
+                border-radius: 50%;
+            }
+            
+            img{
+                width:10rem;
+                height:10rem;
+            }
+
+            h1{
+                font-size:2rem;
+                color:$black-cherry-color;
+            }
+
+            h4{
+                font-size:3rem;
+            }
+        }
+    }
+}
