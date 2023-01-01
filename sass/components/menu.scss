@@ -1,13 +1,5 @@
 .menu{
     position: relative;
-    background-color: $mint-color;
-    @include respond(tablet) {
-        margin-top:17rem;
-      }
-
-      @include respond(phone) {
-        margin-top:10rem;
-      }
 
     .menuContainer{
         width:90%;
@@ -17,6 +9,7 @@
         gap:4rem;
         flex-wrap: wrap;
         padding-top:5rem;
+        margin-top:4rem;
 
         .menuCard{
             width:25rem;

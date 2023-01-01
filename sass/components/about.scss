@@ -5,12 +5,11 @@
 
     .aboutContainer{
         width:100%;
-        height:80vh;
         display:flex;
-       margin-top:7rem;
+        margin-top:7rem;
 
         @include respond(tablet) {
-            flex-direction: column;
+            flex-direction: column-reverse;
           }
 
         img{
