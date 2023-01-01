@@ -18,16 +18,20 @@
 </head>
 <body>
 
-  <section class="homeContainer">
+
+  <!-- home section -->
+  <section class="homeContainer" id="home">
+
+    <!-- navbar section -->
     <div class="navbar">
       <div class="navbarLeft">
       <img src="images/logo.png" alt="logo" class="navbarLogo">
       <ul class="navbarList">
-        <li class="navbarListItem"><a href="#">Home</a></li>
-        <li class="navbarListItem"><a href="#">About</a></li>
-        <li class="navbarListItem"><a href="#">Gift Card</a></li>
-        <li class="navbarListItem"><a href="#">Menu</a></li>
-        <li class="navbarListItem"><a href="#">Location</a></li>
+        <li class="navbarListItem"><a data-scroll="home" href="#home" class="active">Home</a></li>
+        <li class="navbarListItem"><a data-scroll="about" href="#about">About</a></li>
+        <li class="navbarListItem"><a data-scroll="gifts" href="#gifts">Gift Card</a></li>
+        <li class="navbarListItem"><a data-scroll="ourmenu" href="#ourmenu">Menu</a></li>
+        <li class="navbarListItem"><a data-scroll="location" href="#location">Location</a></li>
       </ul>
     </div>
       <div class="socialLinks">
@@ -37,6 +41,8 @@
         <ion-icon name="logo-buffer" id="menu"></ion-icon>
       </div>
       </div>
+<!-- navbar section -->
+
       <div class="home">
       <div class="content">
         <h1>Let’s Eat Together!</h1>
@@ -51,23 +57,26 @@
     </div>
   </div>
     </section>
+  <!-- home section -->
 
-    <section class="about">
+    <!-- about section -->
+    <section class="about" id="about">
       <h1 class="heading">About Us</h1>
       <div class="aboutContainer">
       <img src="images/about.jpg" alt="about">
       <div class="details">
         <h4>Our Story</h4>
-        <p>Since our modest beginnings in 2005 with a little space in Toronto’s stylish Yorkville locale, ‘Organization Name’ ‘s development has been enlivened with the energy to cook and serve solid, Indian-roused takeout food.
-
-          In contrast to other Indian eateries, ‘Organization Name’ was made with the explicit expectation to appear as something else.
-          
-          We realize numerous individuals love Indian sustenance, yet a large number of them loathe or are unconscious of the regularly unfortunate fixings that make run-of-the-mill Indian nourishment taste so great.</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+           a type specimen book. It has survived not only five centuries, 
+          but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software 
+          like Aldus PageMaker including versions of Lorem Ipsum.</p>
       </div>
     </div>
     </section>
+     <!-- about section -->
 
-    <section class="menu">
+ <!-- menu section -->
+    <section class="menu" id="ourmenu">
       <h1 class="heading">Menu</h1>
       <div class="menuContainer">
         <div class="menuCard">
@@ -97,8 +106,10 @@
         </div>
       </div>
     </section>
+     <!-- menu section -->
 
-    <section class="giftCard">
+ <!-- gifts section -->
+    <section class="giftCard" id="gifts">
       <h1 class="heading">Gifts</h1>
       <div class="cardContainer">
         <div class="card">
@@ -135,8 +146,11 @@
         </div>
       </div>
     </section>
+ <!-- gifts section -->
 
-    <section class="contact">
+
+ <!-- location section -->
+    <section class="contact" id="location">
       <h1 class="heading">Contact</h1>
       <div class="left">
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969913.356168041!2d-94.46820519541197!3d13.66575827002694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8588135036e7506b%3A0x35982b375b84d5bb!2sGuatemala!5e0!3m2!1str!2str!4v1672465090383!5m2!1str!2str" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -151,10 +165,13 @@
         </form>
       </div>
     </section>
+     <!-- location section -->
 
+      <!-- footer  -->
     <footer>
       Designed by Enes Uraz
     </footer>
+    <!-- footer  -->
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

@@ -23,6 +23,7 @@ body{
 
 html{
     font-size:62%;
+    scroll-behavior: smooth;
     
     @include respond(tablet) { 
         font-size: 56.25%;
